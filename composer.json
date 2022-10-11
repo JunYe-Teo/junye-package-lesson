@@ -1,0 +1,25 @@
+{
+    "name": "junye/package-lesson",
+    "require": {
+        "nwidart/laravel-modules": "8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Junye\\PackageLesson\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "junye",
+            "email": "junye@shipsfocus.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Junye\\PackageLesson\\Providers\\PackageLessonServiceProvider"
+            ]
+        }
+    }
+}
