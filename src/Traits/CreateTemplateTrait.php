@@ -34,33 +34,33 @@ trait CreateTemplateTrait
         switch ($type) {
             case 'model':
                 if ($this->is_meta) {
-                    return __DIR__ . '/../stub/MetaModel.stub';
+                    return __DIR__ . '/../stubs/Meta/MetaModel.stub';
                 }
-                return $this->is_attachment ? __DIR__ . '/../stub/AttachmentModel.stub' : __DIR__ . '/../stub/Model.stub';
+                return $this->is_attachment ? __DIR__ . '/../stubs/Attachment/AttachmentModel.stub' : __DIR__ . '/../stubs/Standard/Model.stub';
             case 'contract':
-                return $this->is_attachment ? __DIR__ . '/../stub/AttachmentContract.stub' : __DIR__ . '/../stub/Contract.stub';
+                return $this->is_attachment ? __DIR__ . '/../stubs/Attachment/AttachmentContract.stub' : __DIR__ . '/../stubs/Standard/Contract.stub';
             case 'repository':
-                return $this->is_attachment ? __DIR__ . '/../stub/AttachmentRepository.stub' : __DIR__ . '/../stub/Repository.stub';
+                return $this->is_attachment ? __DIR__ . '/../stubs/Attachment/AttachmentRepository.stub' : __DIR__ . '/../stubs/Standard/Repository.stub';
             case 'controller':
                 if ($this->is_meta) {
-                    return __DIR__ . '/../stub/MetaController.stub';
+                    return __DIR__ . '/../stubs/Meta/MetaController.stub';
                 }
-                return $this->is_attachment ? __DIR__ . '/../stub/AttachmentController.stub' : __DIR__ . '/../stub/Controller.stub';
+                return $this->is_attachment ? __DIR__ . '/../stubs/Attachment/AttachmentController.stub' : __DIR__ . '/../stubs/Standard/Controller.stub';
             case 'resource':
-                return $this->is_attachment ? __DIR__ . '/../stub/AttachmentResource.stub' : __DIR__ . '/../stub/Resource.stub';
+                return $this->is_attachment ? __DIR__ . '/../stubs/Attachment/AttachmentResource.stub' : __DIR__ . '/../stubs/Standard/Resource.stub';
             case 'attachment_request':
-                return __DIR__ . '/../stub/AttachmentRequest.stub';
+                return __DIR__ . '/../stubs/Attachment/AttachmentRequest.stub';
             case 'store_request':
-                return __DIR__ . '/../stub/StoreRequest.stub';
+                return __DIR__ . '/../stubs/Standard/StoreRequest.stub';
             case 'update_request':
-                return __DIR__ . '/../stub/UpdateRequest.stub';
+                return __DIR__ . '/../stubs/Standard/UpdateRequest.stub';
             case 'service':
-                return __DIR__ . '/../stub/Service.stub';
+                return __DIR__ . '/../stubs/Standard/Service.stub';
             default:
                 if ($this->is_meta) {
-                    return __DIR__ . '/../stub/MetaMigration.stub';
+                    return __DIR__ . '/../stubs/Meta/MetaMigration.stub';
                 }
-                return $this->is_attachment ? __DIR__ . '/../stub/AttachmentMigration.stub' : __DIR__ . '/../stub/Migration.stub';
+                return $this->is_attachment ? __DIR__ . '/../stubs/Attachment/AttachmentMigration.stub' : __DIR__ . '/../stubs/Standard/Migration.stub';
         }
     }
 
