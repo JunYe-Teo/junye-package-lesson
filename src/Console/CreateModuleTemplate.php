@@ -44,7 +44,7 @@ class CreateModuleTemplate extends Command
         Config::set('modules.stubs.path', base_path() . '/vendor/junye/package-lesson/src/stubs/Module');
         Artisan::call('config:cache');
         Artisan::call('route:cache');
-        Artisan::call('module:make ', [ 'name' => $this->argument('module')]);
+        Artisan::call('module:make', [ 'name' => $this->argument('module')]);
         return true;
     }
 }
