@@ -4,6 +4,7 @@ namespace Junye\PackageLesson\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Junye\PackageLesson\Console\CreateModelTemplate;
+use Junye\PackageLesson\Console\CreateModuleTemplate;
 
 class PackageLessonServiceProvider extends ServiceProvider
 {
@@ -11,6 +12,7 @@ class PackageLessonServiceProvider extends ServiceProvider
     {
         $this->commands([
                             CreateModelTemplate::class,
+                            CreateModuleTemplate::class,
                         ]);
     }
 }
